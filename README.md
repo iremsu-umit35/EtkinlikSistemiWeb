@@ -11,7 +11,7 @@ Bu proje, bir **Etkinlik Yönetim Sistemi**’dir. Kullanıcılar etkinlikleri g
 - İlgi alanlarına göre öneri alma
 - Hava durumuna göre etkinlik planlanabilirliğini görüntüleme
 - Bilet satın alma ve sepet işlemleri
-- Otomatik bilet fiyatlandırma ve kontenjan azaltma
+   kontenjan azaltma
 
 ### 🛠️ Yönetici
 - Yeni kullanıcıları onaylama
