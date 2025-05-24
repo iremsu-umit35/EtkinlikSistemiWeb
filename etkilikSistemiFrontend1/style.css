@@ -1,0 +1,126 @@
+/* Genel gövde stili */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Kapsayıcı kutu stili */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Kapsayıcı kutu üzerine gelindiğinde */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Başlık stili */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Form düzeni */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Etiket (label) stili */
+label {
+    text-align: left;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* E-posta ve şifre girdi alanları */
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Girdi alanı odaklanınca */
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #e67e22;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gönder butonu stili */
+button[type="submit"] {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gönder butonu üzerine gelindiğinde */
+button[type="submit"]:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+/* Gönder butonuna tıklandığında */
+button[type="submit"]:active {
+    transform: scale(1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Hata veya bilgi mesajları */
+#sonuc,
+#registerResult,
+#result {
+    color: #c0392b;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Kayıt ol bağlantısı stili */
+.register-link {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Kayıt ol bağlantısı üzerine gelince */
+.register-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}

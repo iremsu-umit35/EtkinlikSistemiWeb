@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="admin-panel.css">
+</head>
+<body>
+
+<h1>Admin Paneline Hoş Geldiniz</h1>
+
+<!-- Onay Bekleyen Kullanıcılar Bölümü -->
+<section>
+    <h2>Bekleyen Kullanıcı Onayları</h2>
+    <button onclick="getPendingUsers()">Onaysız Kullanıcıları Getir</button>  <!-- Onaysız kullanıcıları getiren buton -->
+    <ul id="pendingUserList" class="hidden"></ul>  <!-- Onay bekleyen kullanıcıların listeleneceği alan -->
+</section>
+
+<hr>
+
+<section>
+    <h2>Etkinlik Yönetimi</h2>
+    <button onclick="getEvents()">Tüm Etkinlikleri Getir</button>  <!-- Sistemde kayıtlı tüm etkinlikleri getiren buton -->
+    <ul id="eventList" class="hidden"></ul> <!-- Etkinliklerin listeleneceği alan -->
+
+    <h3>Yeni Etkinlik Ekle</h3>  <!-- Yeni etkinlik ekleme formu -->
+    <form id="eventForm">
+        <input type="text" id="ad" placeholder="Ad" required>
+        <input type="text" id="aciklama" placeholder="Açıklama" required>
+        <input type="text" id="tur" placeholder="Tür (Konser, Tiyatro vb.)" required>
+        <input type="date" id="tarih" required>
+        <input type="text" id="lokasyon" placeholder="Lokasyon" required>
+        <input type="number" id="kapasite" placeholder="Kapasite" required>
+        <input type="number" step="0.01" id="biletFiyati" placeholder="Bilet Fiyatı" required>
+        <button type="submit" id="submitBtn">Etkinlik Ekle</button>  <!-- Etkinlik ekleme butonu -->
+    </form>
+</section>
+
+<!-- Duyuru Ekleme Formu -->
+    <h2>Duyuru Ekle</h2>
+    <form id="announcementForm">
+        <label for="baslik">Başlık:</label>
+        <input type="text" id="baslik" name="baslik" required><br>
+
+        <label for="icerik">İçerik:</label>
+        <textarea id="icerik" name="icerik" required></textarea><br>
+
+        <button type="submit">Duyuru Ekle</button>  <!-- Duyuru ekleme butonu -->
+    </form>
+<!-- Yayınlanan duyuruların listelendiği bölüm -->
+    <section id="announcementSection">
+        <h2>Duyurular</h2>
+        <ul id="announcementList" class="hidden"></ul>
+    </section>
+
+<!-- Hava durumu verilerini güncelleyen buton -->
+<button id="guncelleHavaBtn">Hava Durumunu Güncelle</button>
+<div id="guncelleSonucu"></div>
+
+<script src="admin-panel.js"></script>
+</body>
+</html>

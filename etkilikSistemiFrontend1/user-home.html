@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Etkinlikler</title>
+    <link rel="stylesheet" href="user-home.css">
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+</head>
+<body>
+
+<!-- Üst Menü -->
+<div class="navbar">
+    <div class="user-info" id="username">Hoş geldiniz!</div>
+    <div>
+        <button onclick="getUserTickets()">🎟 Biletlerim</button>
+        <button onclick="cikisYap()">🚪 Çıkış Yap</button>
+    </div>
+</div>
+
+<!-- Ana İçerik -->
+<div class="container">
+    <h1>Etkinlikler</h1>
+
+    <!-- Filtreleme Alanı -->
+    <div id="filtreleme">
+        <input type="text" id="arama" placeholder="Etkinlik adı ara...">
+        <select id="tur">
+            <option value="">Tüm Türler</option>
+            <option value="Festival">Festival</option>
+            <option value="Tiyatro">Tiyatro</option>
+            <option value="Konser">Konser</option>
+        </select>
+        <input type="date" id="tarih">
+        <select id="sehir">
+            <option value="">Tüm Şehirler</option>
+            <option value="İstanbul">İstanbul</option>
+            <option value="Ankara">Ankara</option>
+            <option value="Bursa">Bursa</option>
+        </select>
+        <input type="number" id="minFiyat" placeholder="Min ₺">
+        <input type="number" id="maxFiyat" placeholder="Max ₺">
+        <button onclick="filtrele()">Filtrele</button>
+    </div>
+
+    <!-- Etkinlik Listesi -->
+    <div id="event-list" class="event-list"></div>
+
+    <!-- Daha Fazla Yükle Butonu -->
+    <button id="load-more" onclick="loadMoreEvents()">Daha Fazla Yükle</button>
+</div>
+
+<section id="duyurular">
+    <h2>Duyurular</h2>
+    <div id="duyuruContainer"></div>
+</section>
+
+
+<div id="cart-panel">
+    <h3>🛒 Sepetiniz</h3>
+    <ul id="cart-items">
+        <li>Sepetiniz Boş</li>
+    </ul>
+    <p>Toplam: <span id="cart-total">0</span> ₺</p>
+    <button id="pay-cart-btn" style="display: none;">Sepeti Öde</button>
+</div>
+
+<!-- Biletlerim Paneli
+<div id="ticket-panel" style="display: none; margin: 20px;">
+    <span style="float: right; cursor: pointer;" onclick="document.getElementById('ticket-panel').style.display='none'">❌</span>
+    <h2>🎟 Biletlerim</h2>
+    <div id="ticketContainer"></div>
+</div>
+-->
+<div id="payment-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" id="close-payment-modal">&times;</span>
+        <h2>Ödeme Yap</h2>
+        <label>Ödeme Yöntemi:</label><br />
+        <input type="radio" name="paymentMethod" value="Kredi Kartı" checked> Kredi Kartı<br />
+        <input type="radio" name="paymentMethod" value="Kapıda Ödeme"> Kapıda Ödeme<br /><br />
+        <button id="confirm-payment-btn">Ödemeyi Tamamla</button>
+    </div>
+</div>
+
+<div id="havaDurumuPanel" class="hava-panel">
+    <h3>Şehir Seçerek Hava Durumu Gör</h3>
+
+    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+        <input type="text" id="sehirInput" placeholder="Şehir giriniz (örn: İzmir)" style="padding: 8px; flex: 1;">
+        <button onclick="havaDurumuGetir()" style="padding: 8px 12px; cursor: pointer;">Göster</button>
+    </div>
+
+    <div id="havaSonuc" style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+        <i id="havaIkon" style="font-size: 48px; display: none;"></i>
+        <p id="havaBilgisi">Henüz veri yok</p>
+    </div>
+</div>
+<script src="user-home.js"></script>
+</body>
+</html>

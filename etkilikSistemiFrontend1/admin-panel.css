@@ -1,0 +1,213 @@
+/* Genel Stiller */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5; /* Daha açık bir arka plan */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: orange; /* Hava durumu güncelleme butonu rengi */
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: orange; /* Hava durumu güncelleme butonu rengi */
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid darkorange; /* Hava durumu güncelleme butonu hover rengi */
+}
+
+h2 {
+    border-bottom: 3px solid darkorange; /* Hava durumu güncelleme butonu hover rengi */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: orange; /* Hava durumu güncelleme butonu rengi */
+}
+
+hr {
+    border: 1px solid darkorange; /* Hava durumu güncelleme butonu hover rengi */
+    margin: 30px 0;
+}
+
+button {
+    background-color: orange; /* Hava durumu güncelleme butonu rengi */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkorange; /* Hava durumu güncelleme butonu hover rengi */
+}
+
+/* Listeler */
+ul#pendingUserList,
+ul#eventList,
+ul#announcementList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul#pendingUserList li,
+ul#eventList li,
+ul#announcementList li {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 5px solid orange; /* Hava durumu güncelleme butonu rengi */
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul#pendingUserList li button,
+ul#announcementList li button {
+    margin-left: 10px;
+    background-color: orange; /* Hava durumu güncelleme butonu rengi */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+ul#pendingUserList li button:hover,
+ul#announcementList li button:hover {
+    background-color: darkorange; /* Hava durumu güncelleme butonu hover rengi */
+}
+
+/* Form Stilleri */
+#eventForm,
+#announcementForm {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid darkorange; /* Hava durumu güncelleme butonu hover rengi */
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+#eventForm label,
+#announcementForm label {
+    font-weight: bold;
+    color: orange; /* Hava durumu güncelleme butonu rengi */
+}
+
+#eventForm input[type="text"],
+#eventForm input[type="date"],
+#eventForm input[type="number"],
+#announcementForm input[type="text"],
+#announcementForm textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#eventForm input[type="text"]:focus,
+#eventForm input[type="date"]:focus,
+#eventForm input[type="number"]:focus,
+#announcementForm input[type="text"]:focus,
+#announcementForm textarea:focus {
+    border-color: orange; /* Hava durumu güncelleme butonu rengi */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.3); /* Turuncu odaklanma efekti */
+}
+
+#eventForm button[type="submit"],
+#announcementForm button[type="submit"] {
+    background-color: orange; /* Hava durumu güncelleme butonu rengi */
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#eventForm button[type="submit"]:hover,
+#announcementForm button[type="submit"]:hover {
+    background-color: darkorange; /* Hava durumu güncelleme butonu hover rengi */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Duyuru Listesi */
+ul#announcementList li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+ul#announcementList li h3 {
+    margin: 0;
+    color: orange; /* Hava durumu güncelleme butonu rengi */
+    font-size: 1.1em;
+}
+
+ul#announcementList li p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+ul#announcementList li > button {
+    align-self: flex-end;
+    margin-left: auto;
+    background-color: orange; /* Hava durumu güncelleme butonu rengi */
+}
+
+ul#announcementList li > button:hover {
+    background-color: darkorange; /* Hava durumu güncelleme butonu hover rengi */
+}
+
+/* Hava Durumu Güncelle Butonu */
+#guncelleHavaBtn {
+    background-color: orange;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#guncelleHavaBtn:hover {
+    background-color: darkorange;
+}
+
+#guncelleSonucu {
+    margin-top: 10px;
+    font-style: italic;
+    color: green;
+}
